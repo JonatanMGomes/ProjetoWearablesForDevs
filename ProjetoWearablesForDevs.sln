@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoWearablesForDevs.Lib", "ProjetoWearablesForDevs.Lib\ProjetoWearablesForDevs.Lib.csproj", "{ACB88DB3-E380-4F36-99C3-54759498261E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoWearablesForDevs.TesteUnitario", "ProjetoWearablesForDevs.TesteUnitario\ProjetoWearablesForDevs.TesteUnitario.csproj", "{5C42246E-CB54-4937-861B-E31BD24D8350}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACB88DB3-E380-4F36-99C3-54759498261E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB88DB3-E380-4F36-99C3-54759498261E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB88DB3-E380-4F36-99C3-54759498261E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB88DB3-E380-4F36-99C3-54759498261E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C42246E-CB54-4937-861B-E31BD24D8350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C42246E-CB54-4937-861B-E31BD24D8350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C42246E-CB54-4937-861B-E31BD24D8350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C42246E-CB54-4937-861B-E31BD24D8350}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
