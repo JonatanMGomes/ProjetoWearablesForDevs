@@ -6,11 +6,22 @@ namespace ProjetoWearablesForDevs.TesteUnitario
     public class ProdutoTest
     {
         [Fact]
+        public void TestandoSeProdutoSalvaIdCorretamente()
+        {
+            //Arrange - Preparando
+            var idEsperado = 1;
+            var produtoTest = new Produto(idEsperado, "produto insano", "razer", "Produto top das galaxias!", true, 500, 3);
+            //Act - Agindo
+            var idATestar = produtoTest.GetId();
+            //Assert - 
+            Assert.Equal(idEsperado, idATestar);
+        }
+        [Fact]
         public void TestandoSeProdutoSalvaNomeCorretamente()
         {
             //Arrange - Preparando
             var nomeEsperado = "produto insano";
-            var produtoTest = new Produto(nomeEsperado, "razer", "Produto top das galaxias!", true, 500, 3);
+            var produtoTest = new Produto(1, nomeEsperado, "razer", "Produto top das galaxias!", true, 500, 3);
             //Act - Agindo
             var nomeATestar = produtoTest.GetNome();
             //Assert - 
@@ -21,7 +32,7 @@ namespace ProjetoWearablesForDevs.TesteUnitario
         {
             //Arrange - Preparando
             var marcaEsperada = "razer";
-            var produtoTest = new Produto("produto insano", marcaEsperada, "Produto top das galaxias!", true, 500, 3);
+            var produtoTest = new Produto(1, "produto insano", marcaEsperada, "Produto top das galaxias!", true, 500, 3);
             //Act - Agindo
             var marcaATestar = produtoTest.GetMarca();
             //Assert - 
@@ -32,7 +43,7 @@ namespace ProjetoWearablesForDevs.TesteUnitario
         {
             //Arrange - Preparando
             var descricaoEsperada = "Produto top das galaxias!";
-            var produtoTest = new Produto("produto insano", "razer", descricaoEsperada, true, 500, 3);
+            var produtoTest = new Produto(1, "produto insano", "razer", descricaoEsperada, true, 500, 3);
             //Act - Agindo
             var descricaoATestar = produtoTest.GetDescricao();
             //Assert - 
@@ -43,7 +54,7 @@ namespace ProjetoWearablesForDevs.TesteUnitario
         {
             //Arrange - Preparando
             var semFioEsperado = true;
-            var produtoTest = new Produto("produto insano", "razer", "Produto top das galaxias!", semFioEsperado, 500, 3);
+            var produtoTest = new Produto(1, "produto insano", "razer", "Produto top das galaxias!", semFioEsperado, 500, 3);
             //Act - Agindo
             var semFioATestar = produtoTest.GetSemFio();
             //Assert - 
@@ -54,7 +65,7 @@ namespace ProjetoWearablesForDevs.TesteUnitario
         {
             //Arrange - Preparando
             var valorEsperado = 500;
-            var produtoTest = new Produto("produto insano", "razer", "Produto top das galaxias!", true, valorEsperado, 3);
+            var produtoTest = new Produto(1, "produto insano", "razer", "Produto top das galaxias!", true, valorEsperado, 3);
             //Act - Agindo
             var valorATestar = produtoTest.GetValor();
             //Assert - 
@@ -65,7 +76,7 @@ namespace ProjetoWearablesForDevs.TesteUnitario
         {
             //Arrange - Preparando
             var estoqueEsperado = 3;
-            var produtoTest = new Produto("produto insano", "razer", "Produto top das galaxias!", true, 500, estoqueEsperado);
+            var produtoTest = new Produto(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, estoqueEsperado);
             //Act - Agindo
             var estoqueATestar = produtoTest.GetEstoque();
             //Assert - 
@@ -76,7 +87,7 @@ namespace ProjetoWearablesForDevs.TesteUnitario
         {
             //Arrange - Preparando
             var surroundEsperado = true;
-            var produtoTest = new HeadSet("produto insano", "razer", "Produto top das galaxias!", true, 500, 3, surroundEsperado);
+            var produtoTest = new HeadSet(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 3, surroundEsperado);
             //Act - Agindo
             var surroundATestar = produtoTest.GetSurround();
             //Assert - 
@@ -87,7 +98,7 @@ namespace ProjetoWearablesForDevs.TesteUnitario
         {
             //Arrange - Preparando
             var dpiEsperado = 2500;
-            var produtoTest = new Mouse("produto insano", "razer", "Produto top das galaxias!", true, 500, 3, dpiEsperado);
+            var produtoTest = new Mouse(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 3, dpiEsperado);
             //Act - Agindo
             var dpiATestar = produtoTest.GetDPI();
             //Assert - 
@@ -98,7 +109,7 @@ namespace ProjetoWearablesForDevs.TesteUnitario
         {
             //Arrange - Preparando
             var mecanicoEsperado = true;
-            var produtoTest = new Teclado("produto insano", "razer", "Produto top das galaxias!", true, 500, 3, mecanicoEsperado);
+            var produtoTest = new Teclado(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 3, mecanicoEsperado);
             //Act - Agindo
             var mecanicoATestar = produtoTest.GetMecanico();
             //Assert - 

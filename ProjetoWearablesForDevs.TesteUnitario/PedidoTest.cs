@@ -23,7 +23,7 @@ namespace ProjetoWearablesForDevs.TesteUnitario
         {
             //Arrange - Preparando
             var produtosEsperados = new List<Produto>();
-            var produto = new Produto("produto insano", "razer", "Produto top das galaxias!", true, 500, 3);
+            var produto = new Produto(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 3);
             produtosEsperados.Add(produto);
             var cliente = new Cliente("Jonatan", "email@email.com", "senhamuitolouca", "11122233344", "Rua A");
             var pedidoTest = new Pedido(cliente, "a caminho", "19/05/2022");

@@ -2,20 +2,30 @@ namespace ProjetoWearablesForDevs.Lib
 {
     public class Produto
     {
+        private int Id { get; set; }
         private string Nome { get; set; }
         private string Marca { get; set; }
         private string Descricao { get; set; }
         private bool SemFio { get; set; }
         private double Valor { get; set; }
         private int Estoque { get; set; }
-        public Produto(string nome, string marca, string descricao, bool semFio, double valor, int estoque)
+        public Produto(int id, string nome, string marca, string descricao, bool semFio, double valor, int estoque)
         {
+            SetId(id);
             SetNome(nome);
             SetMarca(marca);
             SetDescricao(descricao);
             SetSemFio(semFio);
             SetValor(valor);
             SetEstoque(estoque);
+        }
+        public int GetId()
+        {
+            return Id;
+        }
+        public void SetId(int id)
+        {
+            Id = id;
         }
         public string GetNome()
         {
