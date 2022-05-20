@@ -29,7 +29,7 @@ namespace ProjetoWearablesForDevs.Lib
         }
         public string GetSenha()
         {
-            return Nome;
+            return Senha;
         }
         public void SetSenha(string senha)
         {

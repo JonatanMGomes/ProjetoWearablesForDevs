@@ -13,6 +13,7 @@ namespace ProjetoWearablesForDevs.Lib
             SetNome(nome);
             SetMarca(marca);
             SetDescricao(descricao);
+            SetSemFio(semFio);
             SetValor(valor);
             SetEstoque(estoque);
         }
