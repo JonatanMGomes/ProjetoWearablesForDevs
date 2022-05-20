@@ -4,18 +4,9 @@ namespace ProjetoWearablesForDevs.Lib
     {
         private bool SemFio { get; set; }
         private bool Surround { get; set; }
-        public HeadSet(string nome, string marca, string descricao, double valor, int estoque, bool semFio, bool surround) : base(nome, marca, descricao, valor, estoque)
+        public HeadSet(string nome, string marca, string descricao, bool semFio, double valor, int estoque, bool surround) : base(nome, marca, descricao, semFio, valor, estoque)
         {
             SetSurround(surround);
-            SetSemFio(semFio);
-        }
-        public bool GetSemFio()
-        {
-            return SemFio;
-        }
-        public void SetSemFio(bool semFio)
-        {
-            SemFio = semFio;
         }
         public bool GetSurround()
         {

@@ -5,9 +5,10 @@ namespace ProjetoWearablesForDevs.Lib
         private string Nome { get; set; }
         private string Marca { get; set; }
         private string Descricao { get; set; }
+        private bool SemFio { get; set; }
         private double Valor { get; set; }
         private int Estoque { get; set; }
-        public Produto(string nome, string marca, string descricao, double valor, int estoque)
+        public Produto(string nome, string marca, string descricao, bool semFio, double valor, int estoque)
         {
             SetNome(nome);
             SetMarca(marca);
@@ -38,6 +39,14 @@ namespace ProjetoWearablesForDevs.Lib
         public void SetDescricao(string descricao)
         {
             Descricao = descricao;
+        }
+        public bool GetSemFio()
+        {
+            return SemFio;
+        }
+        public void SetSemFio(bool semFio)
+        {
+            SemFio = semFio;
         }
         public double GetValor()
         {
