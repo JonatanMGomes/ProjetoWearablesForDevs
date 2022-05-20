@@ -54,5 +54,13 @@ namespace ProjetoWearablesForDevs.Lib
         {
             Data = DateTime.Parse(data);
         }
+        public void AdicionarProduto(Produto produto)
+        {
+            Produtos.Add(produto);
+        }
+        public void RemoverProduto(int idProduto)
+        {
+            Produtos.RemoveAll(produtoARemover => produtoARemover.GetId() == idProduto);
+        }
     }
 }

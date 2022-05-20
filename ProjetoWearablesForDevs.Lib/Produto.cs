@@ -75,5 +75,13 @@ namespace ProjetoWearablesForDevs.Lib
         {
             Estoque = estoque;
         }
+        public void AdicionarEstoque(int qtdAAdicionar)
+        {
+            Estoque = Estoque + qtdAAdicionar;
+        }
+        public void RemoverEstoque(int qtdARemover)
+        {
+            Estoque = Estoque - qtdARemover;
+        }
     }
 }

@@ -70,5 +70,32 @@ namespace ProjetoWearablesForDevs.TesteUnitario
             //Assert - 
             Assert.Equal(DateTime.Parse(dataEsperada), dataATestar);
         }
+        [Fact]
+        public void TestandoSePedidoAdicionaProdutoCorretamente()
+        {
+            //Arrange - Preparando
+            var produtoAdicionadoEsperado = new Produto(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 0);
+            var cliente = new Cliente("Jonatan", "email@email.com", "senhamuitolouca", "11122233344", "Rua A");
+            var pedidoTest = new Pedido(cliente, "a caminho", "19/05/2022");
+            //Act - Agindo
+            pedidoTest.AdicionarProduto(produtoAdicionadoEsperado);
+            var produtoAdicionadoATestar = pedidoTest.GetProdutos().Find(produto => produto.GetId() == produtoAdicionadoEsperado.GetId());
+            //Assert - 
+            Assert.Equal(produtoAdicionadoEsperado, produtoAdicionadoATestar);
+        }
+        [Fact]
+        public void TestandoSePedidoRemoveProdutoCorretamente()
+        {
+            //Arrange - Preparando
+            var produtoARemover = new Produto(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 0);
+            var cliente = new Cliente("Jonatan", "email@email.com", "senhamuitolouca", "11122233344", "Rua A");
+            var pedidoTest = new Pedido(cliente, "a caminho", "19/05/2022");
+            //Act - Agindo
+            pedidoTest.AdicionarProduto(produtoARemover);
+            pedidoTest.RemoverProduto(1);
+            var pedidoRemovido = pedidoTest.GetProdutos().Exists(produto => produto.GetId() == 1);
+            //Assert - 
+            Assert.Equal(false, pedidoRemovido);
+        }
     }
 }

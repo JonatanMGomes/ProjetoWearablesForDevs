@@ -83,6 +83,30 @@ namespace ProjetoWearablesForDevs.TesteUnitario
             Assert.Equal(estoqueEsperado, estoqueATestar);
         }
         [Fact]
+        public void TestandoSeProdutoAdicionaEstoqueCorretamente()
+        {
+            //Arrange - Preparando
+            var estoqueEsperado = 3;
+            var produtoTest = new Produto(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 0);
+            //Act - Agindo
+            produtoTest.AdicionarEstoque(3);
+            var estoqueATestar = produtoTest.GetEstoque();
+            //Assert - 
+            Assert.Equal(estoqueEsperado, estoqueATestar);
+        }
+        [Fact]
+        public void TestandoSeProdutoRemoveEstoqueCorretamente()
+        {
+            //Arrange - Preparando
+            var estoqueEsperado = 1;
+            var produtoTest = new Produto(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 5);
+            //Act - Agindo
+            produtoTest.RemoverEstoque(4);
+            var estoqueATestar = produtoTest.GetEstoque();
+            //Assert - 
+            Assert.Equal(estoqueEsperado, estoqueATestar);
+        }
+        [Fact]
         public void TestandoSeHeadSetSalvaSurroundCorretamente()
         {
             //Arrange - Preparando
