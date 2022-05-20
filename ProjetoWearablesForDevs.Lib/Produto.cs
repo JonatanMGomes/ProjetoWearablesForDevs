@@ -65,7 +65,7 @@ namespace ProjetoWearablesForDevs.Lib
         }
         public void SetValor(double valor)
         {
-            Valor = valor;
+            Valor = CalcularValor(valor);
         }
         public int GetEstoque()
         {
@@ -82,6 +82,10 @@ namespace ProjetoWearablesForDevs.Lib
         public void RemoverEstoque(int qtdARemover)
         {
             Estoque = Estoque - qtdARemover;
+        }
+        public virtual double CalcularValor(double valorBase)
+        {
+            return valorBase;
         }
     }
 }

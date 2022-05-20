@@ -15,6 +15,18 @@ namespace ProjetoWearablesForDevs.Lib
         {
             Mecanico = mecanico;
         }
+        public override double CalcularValor(double valorBase)
+        {
+            if (GetMecanico())
+            {
+                valorBase = valorBase + 200;
+            }
+            if (GetSemFio())
+            {
+                valorBase = valorBase + (valorBase * 0.15);
+            }
+            return valorBase;
+        }
     }
 
 }

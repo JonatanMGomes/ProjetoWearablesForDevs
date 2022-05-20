@@ -107,6 +107,17 @@ namespace ProjetoWearablesForDevs.TesteUnitario
             Assert.Equal(estoqueEsperado, estoqueATestar);
         }
         [Fact]
+        public void TestandoSeProdutoCalculaValorCorretamente()
+        {
+            //Arrange - Preparando
+            var valorEsperado = 500;
+            var produtoTest = new Produto(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 0);
+            //Act - Agindo
+            var valorATestar = produtoTest.GetValor();
+            //Assert - 
+            Assert.Equal(valorEsperado, valorATestar);
+        }
+        [Fact]
         public void TestandoSeHeadSetSalvaSurroundCorretamente()
         {
             //Arrange - Preparando
@@ -116,6 +127,18 @@ namespace ProjetoWearablesForDevs.TesteUnitario
             var surroundATestar = produtoTest.GetSurround();
             //Assert - 
             Assert.Equal(surroundEsperado, surroundATestar);
+        }
+        [Fact]
+        public void TestandoSeHeadSetCalculaValorCorretamente()
+        {
+            //Arrange - Preparando
+            var valorEsperado = 1000;
+            var produtoTest = new HeadSet(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 3, true);
+            //Act - Agindo
+            produtoTest.SetValor(500);
+            var valorATestar = produtoTest.GetValor();
+            //Assert - 
+            Assert.Equal(valorEsperado, valorATestar);
         }
         [Fact]
         public void TestandoSeMouseSalvaDPICorretamente()
@@ -129,6 +152,18 @@ namespace ProjetoWearablesForDevs.TesteUnitario
             Assert.Equal(dpiEsperado, dpiATestar);
         }
         [Fact]
+        public void TestandoSeMouseCalculaValorCorretamente()
+        {
+            //Arrange - Preparando
+            var valorEsperado = 632.50;
+            var produtoTest = new Mouse(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 3, 2500);
+            produtoTest.SetValor(500);
+            //Act - Agindo
+            var valorATestar = produtoTest.GetValor();
+            //Assert - 
+            Assert.Equal(valorEsperado, valorATestar);
+        }
+        [Fact]
         public void TestandoSeTecladoSalvaMecanicoCorretamente()
         {
             //Arrange - Preparando
@@ -138,6 +173,18 @@ namespace ProjetoWearablesForDevs.TesteUnitario
             var mecanicoATestar = produtoTest.GetMecanico();
             //Assert - 
             Assert.Equal(mecanicoEsperado, mecanicoATestar);
+        }
+        [Fact]
+        public void TestandoSeTecladoCalculaValorCorretamente()
+        {
+            //Arrange - Preparando
+            var valorEsperado = 805;
+            var produtoTest = new Teclado(1, "produto insano", "razer", "Produto top das galaxias!", true, 500, 3, true);
+            produtoTest.SetValor(500);
+            //Act - Agindo
+            var valorATestar = produtoTest.GetValor();
+            //Assert - 
+            Assert.Equal(valorEsperado, valorATestar);
         }
     }
 }

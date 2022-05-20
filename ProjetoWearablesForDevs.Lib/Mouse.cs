@@ -15,5 +15,14 @@ namespace ProjetoWearablesForDevs.Lib
         {
             DPI = dpi;
         }
+        public override double CalcularValor(double valorBase)
+        {
+            valorBase = valorBase + (DPI / 50);
+            if (GetSemFio())
+            {
+                valorBase = valorBase + (valorBase * 0.15);
+            }
+            return valorBase;
+        }
     }
 }

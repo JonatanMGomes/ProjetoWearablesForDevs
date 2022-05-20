@@ -15,5 +15,20 @@ namespace ProjetoWearablesForDevs.Lib
         {
             Surround = surround;
         }
+        public override double CalcularValor(double valorBase)
+        {
+            if (GetSemFio() && GetSurround())
+            {
+                return valorBase + 500;
+            }
+            else if (GetSemFio() || GetSurround())
+            {
+                return valorBase + 150;
+            }
+            else
+            {
+                return valorBase;
+            }
+        }
     }
 }

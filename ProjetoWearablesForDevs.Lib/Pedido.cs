@@ -62,5 +62,14 @@ namespace ProjetoWearablesForDevs.Lib
         {
             Produtos.RemoveAll(produtoARemover => produtoARemover.GetId() == idProduto);
         }
+        public double FinalizarPedido()
+        {
+            double valorTotalARetornar = 0;
+            for (int contador = 0; contador < Produtos.Count; contador++)
+            {
+                valorTotalARetornar = valorTotalARetornar + Produtos[contador].GetValor();
+            }
+            return valorTotalARetornar;
+        }
     }
 }
