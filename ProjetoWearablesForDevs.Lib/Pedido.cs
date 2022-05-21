@@ -60,7 +60,10 @@ namespace ProjetoWearablesForDevs.Lib
         }
         public void RemoverProduto(int idProduto)
         {
-            Produtos.RemoveAll(produtoARemover => produtoARemover.GetId() == idProduto);
+            if (Produtos.Exists(produtoAVerificar => produtoAVerificar.GetId() == idProduto))
+            {
+                Produtos.RemoveAll(produtoARemover => produtoARemover.GetId() == idProduto);
+            }
         }
         public double FinalizarPedido()
         {

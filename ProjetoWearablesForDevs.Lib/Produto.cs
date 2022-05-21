@@ -81,7 +81,10 @@ namespace ProjetoWearablesForDevs.Lib
         }
         public void RemoverEstoque(int qtdARemover)
         {
-            Estoque = Estoque - qtdARemover;
+            if (qtdARemover <= Estoque)
+            {
+                Estoque = Estoque - qtdARemover;
+            }
         }
         public virtual double CalcularValor(double valorBase)
         {
